@@ -4,13 +4,28 @@ API REST para el portal de proveedores
 
 ## Instalación
 
-Clonar el repositorio
+**Clonar el repositorio**
 
 ```
 git clone https://github.com/juanlopezdev/lab-django-api-suppliers.git
 ```
 
-Corre el servidor de desarrollo
+**Activa el entorno virtual**
+
+En sistemas basados en Unix/WSL:
+
+```
+source env/bin/activate
+```
+
+En Windows (usando Command Prompt):
+
+```
+env\Scripts\activate
+```
+
+**Corre el servidor de desarrollo**
+
 ```
 python manage.py runserver
 ```
