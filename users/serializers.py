@@ -17,11 +17,13 @@ class SupplierSerializer(serializers.ModelSerializer):
     class Meta:
         model = Supplier
         fields = '__all__'
+        read_only_fields = ['state']
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = '__all__'
+        read_only_fields = ['state']
 
 class PurchaseRequestSerializer(serializers.ModelSerializer):
     approved_by = serializers.PrimaryKeyRelatedField(
@@ -33,11 +35,10 @@ class PurchaseRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = PurchaseRequest
         fields = '__all__'
+        read_only_fields = ['state']
 
 class PurchaseRequestDetailSerializer(serializers.ModelSerializer):
-    purchase_request = PurchaseRequestSerializer(read_only=True)
-    product = ProductSerializer(read_only=True)
-
     class Meta:
         model = PurchaseRequestDetail
         fields = '__all__'
+        read_only_fields = ['state']
