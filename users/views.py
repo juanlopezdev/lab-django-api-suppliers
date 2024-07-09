@@ -4,9 +4,9 @@ from rest_framework import permissions, viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from tutorial.quickstart.serializers import GroupSerializer, UserSerializer
+# from tutorial.quickstart.serializers import GroupSerializer, UserSerializer
 from .models import Supplier, Product, PurchaseRequest, PurchaseRequestDetail
-from .serializers import SupplierSerializer, ProductSerializer, PurchaseRequestSerializer, PurchaseRequestDetailSerializer
+from .serializers import UserSerializer, GroupSerializer, SupplierSerializer, ProductSerializer, PurchaseRequestSerializer, PurchaseRequestDetailSerializer
 from .permissions import CanApproveOrRejectPaymentRequestPermission, CanInsertOrDeletePaymentRequest, CanUpdatePaymentRequestPermission
 from .utils import transform_string_to_int as utils_transform_string_to_int
 from .constants import ACTIVE, INACTIVE
